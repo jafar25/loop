@@ -411,8 +411,7 @@ describe("loop.shared.views", function() {
         allowClick: false,
         description: "test",
         dispatcher: dispatcher,
-        showContextTitle: false,
-        useDesktopPaths: false
+        showContextTitle: false
       }, extraProps);
       return TestUtils.renderIntoDocument(
         React.createElement(sharedViews.ContextUrlView, props));
@@ -459,7 +458,6 @@ describe("loop.shared.views", function() {
 
     it("should use a default thumbnail for desktop if one is not supplied", function() {
       view = mountTestComponent({
-        useDesktopPaths: true,
         url: "http://wonderful.invalid"
       });
 
@@ -744,8 +742,7 @@ describe("loop.shared.views", function() {
         localVideoMuted: false,
         matchMedia: window.matchMedia,
         renderRemoteVideo: false,
-        showInitialContext: false,
-        useDesktopPaths: false
+        showInitialContext: false
       };
 
       return TestUtils.renderIntoDocument(
